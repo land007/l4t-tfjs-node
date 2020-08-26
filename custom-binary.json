@@ -1,0 +1,4 @@
+{
+  "tf-lib1": "ittps://s3.us.cloud-object-storage.appdomain.cloud/tfjs-cos/libtensorflow-gpu-linux-arm64-1.15.0.tar.gz",
+  "tf-lib": "https://voice.qhkly.com:20443/libtensorflow-gpu-linux-arm64-1.15.0.tar.gz"
+}

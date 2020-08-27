@@ -38,5 +38,11 @@ RUN cd /node/face-api.js/examples/examples-nodejs/ && mv package.json package.js
 ENV TF_CPP_MIN_LOG_LEVEL=0
 ENV TF_CUDA_COMPUTE_CAPABILITIES=7.2
 
+#cat /etc/nvidia-container-runtime/host-files-for-container.d/cuda.csv
+#cat /etc/nvidia-container-runtime/host-files-for-container.d/cudnn.csv
+#sudo ldconfig
+#sudo ln -sf /usr/lib/aarch64-linux-gnu/libcudnn.so.8 /etc/alternatives/libcudnn_so
+#sudo ln -sf /usr/lib/aarch64-linux-gnu/libcudnn_static_v8.a /etc/alternatives/libcudnn_stlib
+
 #docker build -t land007/l4t-tfjs-node:latest .
 #docker run --runtime nvidia --rm -it --name l4t-tfjs1 land007/l4t-tfjs-node:latest bash

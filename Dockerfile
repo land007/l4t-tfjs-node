@@ -1,4 +1,7 @@
-FROM land007/l4t-tensorflow:1.15.0
+#FROM land007/l4t-tensorflow:1.15.0
+FROM land007/l4t-tensorflow:1.15.0_18.04
+#docker build -t land007/l4t-tfjs-node:18.04 .
+#docker run --runtime nvidia --rm -it --name l4t-tfjs1 land007/l4t-tfjs-node:18.04 bash
 
 MAINTAINER Jia Yiqiu <yiqiujia@hotmail.com>
 
@@ -43,6 +46,19 @@ ENV TF_CUDA_COMPUTE_CAPABILITIES=7.2
 #sudo ldconfig
 #sudo ln -sf /usr/lib/aarch64-linux-gnu/libcudnn.so.8 /etc/alternatives/libcudnn_so
 #sudo ln -sf /usr/lib/aarch64-linux-gnu/libcudnn_static_v8.a /etc/alternatives/libcudnn_stlib
+
+
+#Error: /lib/aarch64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found (required by /usr/lib/libtensorflow.so.1)
+## strings /lib/aarch64-linux-gnu/libm.so.6 |grep GLIBC
+#GLIBC_2.17
+#GLIBC_2.18
+#GLIBC_2.23
+#GLIBC_2.24
+#GLIBC_2.25
+#GLIBC_2.27
+#GLIBC_PRIVATE
+## cat /etc/issue
+#Ubuntu 18.04.5 LTS \n \l
 
 #docker build -t land007/l4t-tfjs-node:latest .
 #docker run --runtime nvidia --rm -it --name l4t-tfjs1 land007/l4t-tfjs-node:latest bash
